@@ -1,5 +1,5 @@
 document.getElementById("B3").addEventListener("click", function(event){
-    event.preventDefault();  // Prevenir el envío del formulario
+    event.preventDefault();  
 
     let email = document.getElementById("Email").value.trim();
     let Pass = document.getElementById("Password").value.trim();

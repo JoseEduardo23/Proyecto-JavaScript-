@@ -10,6 +10,22 @@
     margin-top: -2px;
 }
 .hidden-error-message1,
-.hidden-error-message2{
+.hidden-error-message2,
+.hidden-error-message3,
+.hidden-error-message4,
+.hidden-error-message5,
+.hidden-error-message6,
+.hidden-error-message7{
     position: absolute;
+}
+.hidden2{
+    display: none;
+    position: absolute;
+}
+.error2{
+    color: red;
+    font-size: 14px;
+    position: absolute;
+    margin-left: 55px;
+    margin-top: 1px;
 }
