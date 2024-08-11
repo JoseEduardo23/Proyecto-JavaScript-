@@ -33,3 +33,7 @@ document.getElementById("B3").addEventListener("click", function(event){
         window.location.href = "PaginaPrincipal.html";
     }
 });
+
+document.getElementById("B4").addEventListener("click", function(){
+    window.location.href = "IngresoAdmin.html"
+});

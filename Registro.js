@@ -56,5 +56,9 @@ document.getElementById("BIn").addEventListener("click", function(event){
 
     if(camposValidos){
         window.location.href = "PaginaPrincipal.html";
+        alert("Usuario Registrado correctamente");
     }
 });
+document.getElementById("Bcanc").addEventListener("click", function(){
+    window.location.href = "IngresoAdmin.html";
+})
