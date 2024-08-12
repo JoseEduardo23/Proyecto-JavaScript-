@@ -10,7 +10,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
         let camposValidos = true;
 
-        // Cambia estos valores según sea necesario
         let Mailuser = "joselincango73@gmail.com";
         let Passuser = "j.eduardo23";
 

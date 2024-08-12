@@ -24,6 +24,7 @@ document.addEventListener('DOMContentLoaded', function () {
     document.getElementById("BR").addEventListener("click", function () {
         window.location.href = "Registro.html";
     });
+
     document.getElementById("edp1").addEventListener("click", function() {
         window.location.href = "EditarPerfil.html"; 
     });
