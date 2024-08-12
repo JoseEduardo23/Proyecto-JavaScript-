@@ -21,4 +21,7 @@ document.addEventListener('DOMContentLoaded', function () {
         document.getElementById("C1c").addEventListener("click", function() {
             window.location.href = "ContenidoCurso.html";
         });
+        document.getElementById("edp1").addEventListener("click", function() {
+            window.location.href = "EditarPerfil.html"; 
+        });
     });

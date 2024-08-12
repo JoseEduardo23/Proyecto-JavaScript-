@@ -52,4 +52,7 @@ document.addEventListener('DOMContentLoaded', function () {
     document.getElementById("B4").addEventListener("click", function () {
         window.location.href = "IngresoAdmin.html";
     });
+    document.getElementById("edp1").addEventListener("click", function() {
+        window.location.href = "EditarPerfil.html"; 
+    });
 });

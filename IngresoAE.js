@@ -1,5 +1,4 @@
 document.addEventListener('DOMContentLoaded', function () {
-    // Manejo del evento change del select
     document.getElementById("roles").addEventListener("change", function() {
         let selectVALUE = this.value;
 
@@ -10,7 +9,6 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 
-    // Manejo del evento keydown para el campo de búsqueda
     const searchInput = document.getElementById('searchInput');
     searchInput.addEventListener('keydown', function (event) {
         if (event.key === 'Enter') {
@@ -18,13 +16,15 @@ document.addEventListener('DOMContentLoaded', function () {
             if (query === 'cursos') {
                 window.location.href = 'CursosDisp.html';
             } else {
-                window.location.href = 'PaginaNoEncontrada.html'; // Ajusta según tus necesidades
+                window.location.href = 'PaginaNoEncontrada.html';
             }
         }
     });
 
-    // Manejo del evento click del botón BR
     document.getElementById("BR").addEventListener("click", function () {
         window.location.href = "Registro.html";
+    });
+    document.getElementById("edp1").addEventListener("click", function() {
+        window.location.href = "EditarPerfil.html"; 
     });
 });

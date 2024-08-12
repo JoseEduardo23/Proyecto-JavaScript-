@@ -10,9 +10,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
         let camposValidos = true;
 
-        // Cambia estos valores según sea necesario
-        let Mailuser = "joselincango73@gmail.com";
-        let Passuser = "j.eduardo23";
+        let Mailuser = "CodeNestLearning.com";
+        let Passuser = "Grupo5#3";
 
         if (email === "" || email !== Mailuser) {
             emailerror.textContent = "*Por favor ingrese su correo electrónico correctamente.*";
@@ -44,12 +43,15 @@ document.addEventListener('DOMContentLoaded', function () {
             if (query === 'cursos') {
                 window.location.href = 'CursosDisp.html';
             } else {
-                window.location.href = 'PaginaNoEncontrada.html'; // Ajusta según tus necesidades
+                window.location.href = 'PaginaNoEncontrada.html';
             }
         }
     });
 
     document.getElementById("B4").addEventListener("click", function () {
         window.location.href = "IngresoAdmin.html";
+    });
+    document.getElementById("edp1").addEventListener("click", function() {
+        window.location.href = "EditarPerfil.html"; 
     });
 });

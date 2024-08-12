@@ -18,4 +18,7 @@ const searchInput = document.getElementById('searchInput');
         console.log("Botón BI clickeado");
         window.location.href = "IngresoAdmin.html";
     });
+    document.getElementById("edp1").addEventListener("click", function() {
+        window.location.href = "EditarPerfil.html"; 
+    });
 });

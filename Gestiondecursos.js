@@ -46,6 +46,9 @@ document.addEventListener('DOMContentLoaded', () => {
             renderCourses();
         }
     });
+    document.getElementById("edp1").addEventListener("click", function() {
+        window.location.href = "EditarPerfil.html"; 
+    });
 
     saveBtn.addEventListener('click', () => {
         alert('Cursos guardados (en este ejemplo, no se realiza ninguna acción).');
