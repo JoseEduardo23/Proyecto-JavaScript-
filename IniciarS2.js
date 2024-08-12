@@ -1,34 +1,34 @@
 document.addEventListener('DOMContentLoaded', function () {
     document.getElementById("B3").addEventListener("click", function (event) {
-        event.preventDefault();
+        event.preventDefault(); // Evitar el comportamiento predeterminado
 
         let email = document.getElementById("Email").value.trim();
-        let Pass = document.getElementById("Password").value.trim();
+        let pass = document.getElementById("Password").value.trim();
         
-        let emailerror = document.getElementById("Email-error");
-        let passerror = document.getElementById("Contra-error");
+        let emailError = document.getElementById("Email-error");
+        let passError = document.getElementById("Contra-error");
 
         let camposValidos = true;
 
-        let Mailuser = "Grupo5@CodeNestLearning.com";
-        let Passuser = "Grupo5#3";
+        let mailUser = "Grupo5@CodeNestLearning.com";
+        let passUser = "Grupo5#3";
 
-        if (email === "" || email !== Mailuser) {
-            emailerror.textContent = "*Por favor ingrese su correo electrónico correctamente.*";
-            emailerror.classList.remove("hidden");
-            emailerror.classList.add("error1");
+        if (email === "" || email !== mailUser) {
+            emailError.textContent = "*Por favor ingrese su correo electrónico correctamente.*";
+            emailError.classList.remove("hidden");
+            emailError.classList.add("error1");
             camposValidos = false;
         } else {
-            emailerror.classList.add("hidden");
+            emailError.classList.add("hidden");
         }
 
-        if (Pass === "" || Pass !== Passuser) {
-            passerror.textContent = "Ingrese su contraseña correctamente.";
-            passerror.classList.remove("hidden");
-            passerror.classList.add("error1");
+        if (pass === "" || pass !== passUser) {
+            passError.textContent = "Ingrese su contraseña correctamente.";
+            passError.classList.remove("hidden");
+            passError.classList.add("error1");
             camposValidos = false;
         } else {
-            passerror.classList.add("hidden");
+            passError.classList.add("hidden");
         }
 
         if (camposValidos) {
@@ -48,7 +48,7 @@ document.addEventListener('DOMContentLoaded', function () {
         window.location.href = "EditarPerfil.html"; 
     });
 
-    // Añadir la nueva función
+    // Asegúrate de agregar el botón con id="B5" en el HTML si lo usas
     document.getElementById("B5").addEventListener("click", function() {
         window.location.href = "NuevaPagina.html";
     });
