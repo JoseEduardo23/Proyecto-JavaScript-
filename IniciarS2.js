@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
         let camposValidos = true;
 
-        let Mailuser = "CodeNestLearning.com";
+        let Mailuser = "Grupo5@CodeNestLearning.com";
         let Passuser = "Grupo5#3";
 
         if (email === "" || email !== Mailuser) {
