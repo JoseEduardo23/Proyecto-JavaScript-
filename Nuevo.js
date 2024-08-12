@@ -1,24 +1,31 @@
-document.addEventListener('DOMContentLoaded', function () {
-const searchInput = document.getElementById('searchInput');
+document.addEventListener('DOMContentLoaded', () => {
+    const coursesSection = document.getElementById('coursesSection');
+
+    function renderCourses() {
+        const courses = JSON.parse(localStorage.getItem('courses')) || [];
+        coursesSection.innerHTML = '';
+        courses.forEach((course, index) => {
+            const courseDiv = document.createElement('div');
+            courseDiv.className = `C${index + 1}`;
+            courseDiv.innerHTML = `
+                <img src="${course.image}" class="PC1">
+                <p class="cursotxt1">${course.name} HORAS: ${course.hours}H</p>
+            `;
+            coursesSection.appendChild(courseDiv);
+        });
+    }
+
+    renderCourses();
+
+    const searchInput = document.getElementById('searchInput');
     searchInput.addEventListener('keydown', function (event) {
         if (event.key === 'Enter') {
             const query = searchInput.value.trim().toLowerCase();
             if (query === 'cursos') {
                 window.location.href = 'CursosDisp.html';
             } else {
-                window.location.href = 'PaginaNoEncontrada.html'; // Ajusta según tus necesidades
+                window.location.href = 'PaginaNoEncontrada.html';
             }
         }
-    });
-    document.getElementById("BR").addEventListener("click", function () {
-        window.location.href = "Registro.html";
-    });
-
-    document.getElementById("BI").addEventListener("click", function () {
-        console.log("Botón BI clickeado");
-        window.location.href = "IngresoAdmin.html";
-    });
-    document.getElementById("edp1").addEventListener("click", function() {
-        window.location.href = "EditarPerfil.html"; 
     });
 });

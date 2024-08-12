@@ -1,10 +1,11 @@
 document.addEventListener('DOMContentLoaded', () => {
     const coursesSection = document.getElementById('coursesSection');
     const courseInput = document.getElementById('courseInput');
+    const imageInput = document.getElementById('imageInput');
     const addBtn = document.getElementById('addBtn');
     const saveBtn = document.getElementById('saveBtn');
     
-    let courses = []; 
+    let courses = JSON.parse(localStorage.getItem('courses')) || []; 
 
     function renderCourses() {
         coursesSection.innerHTML = '';
@@ -12,7 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const courseDiv = document.createElement('div');
             courseDiv.className = `C${index + 1}`;
             courseDiv.innerHTML = `
-                <img src="Estilos/IMG/Java curso.jpeg" class="PC1">
+                <img src="${course.image}" class="PC1">
                 <p class="cursotxt1">${course.name} HORAS: ${course.hours}H</p>
                 <button class="BM1" onclick="editCourse(${index})">Modificar</button>
                 <button class="BE1" onclick="deleteCourse(${index})">Eliminar</button>
@@ -24,8 +25,10 @@ document.addEventListener('DOMContentLoaded', () => {
     window.editCourse = function(index) {
         const newName = prompt('Ingrese el nuevo nombre del curso:', courses[index].name);
         const newHours = prompt('Ingrese el nuevo número de horas:', courses[index].hours);
-        if (newName !== null && newHours !== null) {
-            courses[index] = { name: newName, hours: newHours };
+        const newImage = prompt('Ingrese la nueva URL de la imagen:', courses[index].image);
+        if (newName !== null && newHours !== null && newImage !== null) {
+            courses[index] = { name: newName, hours: newHours, image: newImage };
+            localStorage.setItem('courses', JSON.stringify(courses));
             renderCourses();
         }
     };
@@ -33,6 +36,7 @@ document.addEventListener('DOMContentLoaded', () => {
     window.deleteCourse = function(index) {
         if (confirm('¿Está seguro de que desea eliminar este curso?')) {
             courses.splice(index, 1);
+            localStorage.setItem('courses', JSON.stringify(courses));
             renderCourses();
         }
     };
@@ -40,18 +44,23 @@ document.addEventListener('DOMContentLoaded', () => {
     addBtn.addEventListener('click', () => {
         const courseName = courseInput.value.trim();
         const courseHours = prompt('Ingrese el número de horas del curso:');
-        if (courseName && courseHours) {
-            courses.push({ name: courseName, hours: courseHours });
-            courseInput.value = '';
-            renderCourses();
+        const imageFile = imageInput.files[0];
+        if (courseName && courseHours && imageFile) {
+            const reader = new FileReader();
+            reader.onload = function(e) {
+                const imageUrl = e.target.result;
+                courses.push({ name: courseName, hours: courseHours, image: imageUrl });
+                localStorage.setItem('courses', JSON.stringify(courses));
+                courseInput.value = '';
+                imageInput.value = '';
+                renderCourses();
+            };
+            reader.readAsDataURL(imageFile);
         }
-    });
-    document.getElementById("edp1").addEventListener("click", function() {
-        window.location.href = "EditarPerfil.html"; 
     });
 
     saveBtn.addEventListener('click', () => {
-        alert('Cursos guardados (en este ejemplo, no se realiza ninguna acción).');
+        alert('Cursos guardados.');
     });
 
     renderCourses();
