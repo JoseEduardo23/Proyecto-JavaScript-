@@ -35,6 +35,16 @@ document.addEventListener('DOMContentLoaded', function () {
             window.location.href = "Gestiondecursos.html";
         }
     });
+});
+document.getElementById("BR").addEventListener("click", function(){
+    window.location.href = "Registro.html";
+});
+document.getElementById("B4").addEventListener("click", function () {
+    window.location.href = "IngresoAdmin.html";
+});
+document.getElementById("edp1").addEventListener("click", function() {
+    window.location.href = "EditarPerfil.html"; 
+});
 
     const searchInput = document.getElementById('searchInput');
     searchInput.addEventListener('keydown', function (event) {
@@ -46,14 +56,4 @@ document.addEventListener('DOMContentLoaded', function () {
                 window.location.href = 'PaginaNoEncontrada.html';
             }
         }
-    });
-    document.getElementById("BR").addEventListener("click", function(){
-        window.location.href = "Registro.html";
-    });
-    document.getElementById("B4").addEventListener("click", function () {
-        window.location.href = "IngresoAdmin.html";
-    });
-    document.getElementById("edp1").addEventListener("click", function() {
-        window.location.href = "EditarPerfil.html"; 
-    });
 });
