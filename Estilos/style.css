@@ -612,13 +612,14 @@ html, body {
     height: 100%;
 }
 .IMG4{
+    position:absolute;
     width: 500px;
     height: 250px;
     margin-left: 190px;
-    margin-bottom: -450px;
+    margin-top: 50px;
 }
 .FootAdm{
-    margin-top: 75px;
+    margin-top: 37px;
 }
 .coment{
     margin-top: -5px;
