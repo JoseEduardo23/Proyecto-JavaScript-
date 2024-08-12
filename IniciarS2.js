@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function () {
-    document.getElementById("B5").addEventListener("click", function (event) {
+    document.getElementById("B5").addEventListener("submit", function (event) {
         event.preventDefault(); 
 
         let email1 = document.getElementById("Email1").value.trim();
@@ -47,7 +47,7 @@ document.addEventListener('DOMContentLoaded', function () {
     document.getElementById("edp1").addEventListener("click", function() {
         window.location.href = "EditarPerfil.html"; 
     });
-    
+
     const searchInput = document.getElementById('searchInput');
     searchInput.addEventListener('keydown', function (event) {
         if (event.key === 'Enter') {
