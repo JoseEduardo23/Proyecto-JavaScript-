@@ -247,7 +247,7 @@ li a:hover, li a:focus {
 }
 
 .Botones {
-    margin-left: 0;
+    margin-left: 50px;
     text-align: center; 
 }
 
@@ -1558,4 +1558,7 @@ footer {
 /******/
 .NuevoFooter{
     margin-top: 500px;
+}
+.I2footer{
+    margin-top: -50px;
 }
