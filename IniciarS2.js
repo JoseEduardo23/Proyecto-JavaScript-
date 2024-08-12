@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', function () {
         }
 
         if (camposValidos) {
-            window.location.href = "index.html";
+            window.location.href = "Gestiondecursos.html";
         }
     });
 
