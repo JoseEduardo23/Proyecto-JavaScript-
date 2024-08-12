@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 if (query === 'cursos') {
                     window.location.href = 'CursosDisp.html';
                 } else {
-                    window.location.href = 'PaginaNoEncontrada.html'; // Ajusta según tus necesidades
+                    window.location.href = 'PaginaNoEncontrada.html'; 
                 }
             }
         });

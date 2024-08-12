@@ -57,7 +57,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
         if (camposValidos) {
             alert("Usuario Registrado correctamente");
-            window.location.href = "PaginaPrincipal.html";
+            window.location.href = "index.html";
         }
     });
 

@@ -33,7 +33,7 @@ document.addEventListener('DOMContentLoaded', function () {
         }
 
         if (camposValidos) {
-            window.location.href = "PaginaPrincipal.html";
+            window.location.href = "index.html";
         }
     });
 
