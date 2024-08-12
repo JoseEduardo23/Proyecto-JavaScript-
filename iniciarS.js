@@ -48,7 +48,9 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         }
     });
-
+    document.getElementById("BR").addEventListener("click", function(){
+        window.location.href = "Registro.html";
+    });
     document.getElementById("B4").addEventListener("click", function () {
         window.location.href = "IngresoAdmin.html";
     });

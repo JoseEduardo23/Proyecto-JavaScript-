@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 if (query === 'cursos') {
                     window.location.href = 'CursosDisp.html';
                 } else {
-                    window.location.href = 'PaginaNoEncontrada.html'; 
+                    window.location.href = 'PaginaNoEncontrada.html';
                 }
             }
         });
@@ -21,4 +21,7 @@ document.addEventListener('DOMContentLoaded', function () {
         document.getElementById("edp1").addEventListener("click", function() {
             window.location.href = "EditarPerfil.html"; 
         });
+        document.getElementById("Det9").addEventListener("click", function(){
+            window.location.href = "ContenidoCurso2.html";
+        })
     });

@@ -6,17 +6,9 @@ document.addEventListener('DOMContentLoaded', function () {
                 if (query === 'cursos') {
                     window.location.href = 'CursosDisp.html';
                 } else {
-                    window.location.href = 'PaginaNoEncontrada.html'; 
+                    window.location.href = 'PaginaNoEncontrada.html';
                 }
             }
-        });
-        document.getElementById("BR").addEventListener("click", function () {
-            window.location.href = "Registro.html";
-        });
-    
-        document.getElementById("BI").addEventListener("click", function () {
-            console.log("Botón BI clickeado");
-            window.location.href = "IngresoAdmin.html";
         });
         document.getElementById("edp1").addEventListener("click", function() {
             window.location.href = "EditarPerfil.html"; 
