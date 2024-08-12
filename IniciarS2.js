@@ -1,51 +1,39 @@
 document.addEventListener('DOMContentLoaded', function () {
-    document.getElementById("B5").addEventListener("submit", function (event) {
-        event.preventDefault(); 
+    document.getElementById("B3").addEventListener("click", function (event) {
+        event.preventDefault();
 
-        let email1 = document.getElementById("Email1").value.trim();
-        let pass1 = document.getElementById("Password1").value.trim();
+        let email = document.getElementById("Email").value.trim();
+        let Pass = document.getElementById("Password").value.trim();
         
-        let emailError1 = document.getElementById("Email-error1");
-        let passError1 = document.getElementById("Contra-error1");
+        let emailerror = document.getElementById("Email-error");
+        let passerror = document.getElementById("Contra-error");
 
         let camposValidos = true;
 
-        let mailUser1 = "Grupo5@CodeNestLearning.com";
-        let passUser1 = "Grupo5#3";
+        let Mailuser = "CodeNest@gmail.com";
+        let Passuser = "Grupo5.code";
 
-        if (email1 === "" || email1 !== mailUser1) {
-            emailError1.textContent = "*Por favor ingrese su correo electrónico correctamente.*";
-            emailError1.classList.remove("hidden");
-            emailError1.classList.add("error1");
+        if (email === "" || email !== Mailuser) {
+            emailerror.textContent = "*Por favor ingrese su correo electrónico correctamente.*";
+            emailerror.classList.remove("hidden");
+            emailerror.classList.add("error1");
             camposValidos = false;
         } else {
-            emailError1.classList.add("hidden");
+            emailerror.classList.add("hidden");
         }
 
-        if (pass1 === "" || pass1 !== passUser1) {
-            passError1.textContent = "Ingrese su contraseña correctamente.";
-            passError1.classList.remove("hidden");
-            passError1.classList.add("error1");
+        if (Pass === "" || Pass !== Passuser) {
+            passerror.textContent = "Ingrese su contraseña correctamente.";
+            passerror.classList.remove("hidden");
+            passerror.classList.add("error1");
             camposValidos = false;
         } else {
-            passError.classList.add("hidden");
+            passerror.classList.add("hidden");
         }
 
         if (camposValidos) {
-            window.location.href = "Gestiondecursos.html";
+            window.location.href = "index.html";
         }
-    });
-
-    document.getElementById("BR").addEventListener("click", function() {
-        window.location.href = "Registro.html";
-    });
-
-    document.getElementById("B4").addEventListener("click", function () {
-        window.location.href = "IngresoAdmin.html";
-    });
-
-    document.getElementById("edp1").addEventListener("click", function() {
-        window.location.href = "EditarPerfil.html"; 
     });
 
     const searchInput = document.getElementById('searchInput');
@@ -55,8 +43,17 @@ document.addEventListener('DOMContentLoaded', function () {
             if (query === 'cursos') {
                 window.location.href = 'CursosDisp.html';
             } else {
-                window.location.href = 'PaginaNoEncontrada.html';
+                window.location.href = 'PaginaNoEncontrada.html'; // Ajusta según tus necesidades
             }
         }
+    });
+    document.getElementById("BR").addEventListener("click", function(){
+        window.location.href = "Registro.html";
+    });
+    document.getElementById("B4").addEventListener("click", function () {
+        window.location.href = "IngresoAdmin.html";
+    });
+    document.getElementById("edp1").addEventListener("click", function() {
+        window.location.href = "EditarPerfil.html"; 
     });
 });
