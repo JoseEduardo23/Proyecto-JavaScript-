@@ -10,6 +10,9 @@ document.addEventListener('DOMContentLoaded', function () {
                 }
             }
         });
+        document.getElementById("Det9").addEventListener("click", function(){
+            window.location.href = "ContenidoCurso2.html";
+        })
         document.getElementById("BR").addEventListener("click", function () {
             window.location.href = "Registro.html";
         });
@@ -21,7 +24,4 @@ document.addEventListener('DOMContentLoaded', function () {
         document.getElementById("edp1").addEventListener("click", function() {
             window.location.href = "EditarPerfil.html"; 
         });
-        document.getElementById("Det9").addEventListener("click", function(){
-            window.location.href = "ContenidoCurso2.html";
-        })
     });
